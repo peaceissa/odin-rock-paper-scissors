@@ -73,7 +73,13 @@ function game(){
         Congratulations! You win!
         Score: ${playerscore} ${computerscore}`)
     }
-    else if()
+    else if(playerscore < computerscore){
+        console.log(`Sorry! You lose!
+        score: ${computerscore} ${playerscore}`)
+    } else (playerscore === computerscore){
+        console.log(`It's a close one
+        Score: ${playerscore} ${computerscore}`)
+    }
 }
 // calling the game function
 game()

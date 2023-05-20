@@ -8,61 +8,52 @@ function getcomputerchoice(){
 // console.log(getcomputerchoice())
 // console.log(getcomputerchoice())
 
-// function to pay a single round 
-function playround(playerSelection, computerSelection){
+// function to pay a single round
+let playerscore = 0
+let computerscore = 0
+
+function playround(playerSelection, computerSelection)
+{
+    // let playerscore = 0
+    // let computerscore = 0
     playerSelection = playerSelection.toLowerCase()
-    let playerscore;
-    let computerscore;
     
-    if (playerSelection === "rock"&& computerSelection==="scissors"){
-        playerscore = ++playerscore; 
+    if (playerSelection === "rock" && computerSelection==="scissors" || 
+        playerSelection === "scissors" && computerSelection === "paper" ||
+        playerSelection ==="paper" && computerSelection === "rock")
+    {
+        playerscore += 1
         console.log("playerscore: ",playerscore)
         console.log("computerscore: ", computerscore)
-        return "You won! Rock beats scissors";
+        let message = "You won this round!"
+        return message 
     } 
-    else if (playerSelection==="rock" && computerSelection === "paper"){
-        computerscore = ++playerscore;
+    else if (playerSelection==="rock" && computerSelection === "paper" ||
+            playerSelection === "scissors" && computerSelection === "rock" ||
+            playerSelection === "paper" && computerSelection === "scissors")
+    {
+        computerscore += 1;
         console.log("playerscore: ",playerscore)
         console.log("computerscore: ", computerscore)
-        return "You lose! paper beats rock";
+        message = "You lost this round!"
+        return message 
     } 
-    else if(playerSelection==="rock" && computerSelection === "rock"){
-        return "It's a tie you wanna go again";
-    } 
-    else if (playerSelection === "scissors" && computerSelection === "paper"){
-        playerscore++;
+    else if (playerSelection==="rock" && computerSelection === "rock" ||
+            playerSelection === "scissors" && computerSelection === "scissors" ||
+            playerSelection === "paper" && computerSelection === "paper")
+    {
         console.log("playerscore: ",playerscore)
-        console.log("computerscore: ", computerscore)
-        return "You won! Scissors beats paper"
+        console.log("computerscore: ",computerscore)
+        message =  "It's a tie you wanna go again";
+        return message
     } 
-    else if (playerSelection === "scissors" && computerSelection === "rock"){
-        computerscore = ++computerscore;
-        console.log("playerscore: ",playerscore)
-        console.log("computerscore: ", computerscore)
-        return "You lose! rock beats scissors"
-    } 
-    else if (playerSelection === "scissors" && computerSelection === "scissors"){
-        return "It's a tie you wanna go again"
-    } 
-    else if (playerSelection ==="paper" && computerSelection === "rock"){
-        playerscore = ++playerscore;
-        console.log("playerscore: ",playerscore)
-        console.log("computerscore: ", computerscore)
-        return "You won! paper beats rock"
-    } 
-    else if (playerSelection === "paper" && computerSelection === "scissors"){
-        computerscore = ++computerscore 
-        console.log("playerscore: ",playerscore)
-        console.log("computerscore: ", computerscore)
-        return "You lose!  scissor beats shop"
+    else{
+        return "invalid choice"
     }
-    else if (playerSelection === "paper" && computerSelection === "paper"){
-        return "It's a tie You wanna go again"
-    }
-   
+     
 } 
     
-// // debugging the playround function
+// debugging the playround function
 // const playerSelection  = "rock";
 // const computerSelection = getcomputerchoice();
 // console.log(playround(playerSelection, computerSelection))
@@ -70,8 +61,7 @@ function playround(playerSelection, computerSelection){
 
 // function to play the game for 5 rounds
 function game(){
-    let playerscore;
-    let computerscore;
+
     for (let i=0; i<5; i++){
         let playerSelection = prompt("pick")
         let computerSelection = getcomputerchoice()
@@ -79,12 +69,11 @@ function game(){
         console.log(round)
     }
     if (playerscore > computerscore){
-        console.log("playerscore", playerscore)
-        console.log("You win")
-    } else {
-        console.log("computerscore", computerscore)
-        console.log("You lose!")
+        console.log(`Game Master
+        Congratulations! You win!
+        Score: ${playerscore} ${computerscore}`)
     }
+    else if()
 }
 // calling the game function
 game()

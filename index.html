@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    
+    <h1>Let's Play A Fun Game <span class="emoji">&#x1F601;</span></h1>
+    <h3>Instructions:</h3>
+    <p>Type the number of rounds you want to play</p>
+    <p>Hit the playround button and then select one option</p>
+    Enter Number of Rounds
+    <input type="text" id="rounds" placeholder="5">
+    <div id="playselect">
+        <div class="btn">
+            <img src="images/rock1.jpeg" alt="rock image">
+            <button type="button" class="btnS" value="rock">Rock</button>
+        </div>
+        <div class="btn">
+            <img src="images/paper.png" alt="paper image">
+            <button type="button" class="btnS" value="paper">Paper</button>
+        </div>
+        <div class="btn">
+            <img src="images/scissors.jpeg" alt="scissors image">
+            <button type="button" class="btnS" value="scissors">Scissors</button>
+        </div>
+    </div>
+    <div class="plyrnd">
+    <button id="playround">Playround</button>
+    </div>
+    <div class="Pselect">
+        <div class="pLeft">
+            <p>Playerselection: </p>
+            <p id="pSelect"></p>
+        </div>
+        <div class="pRight">
+            <p>Computerselection: </p>
+            <p id="cSelect"></p>
+        </div>
+    </div>
+    <div class="scores">
+        <div class="left">
+            <p>Playerscore: </p>
+            <p id="pScore">0</p>
+        </div>
+        <div class="right">
+            <p>Computerscore: </p>
+            <p id="cScore">0</p>
+        </div>
+    </div>
+    <p id="roundMessage"></p>
+    <p id="message"></p>
+    <script src="script1.js"></script>
 </body>
 </html>

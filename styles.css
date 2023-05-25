@@ -1,0 +1,117 @@
+#playselect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+/* setting attributes for the images */
+img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+}
+#playround{
+    margin-top: 20px;
+}
+.btn{
+    max-width: 100px;
+    margin-bottom: 18px;
+    
+}
+/* adding color to the emoji */
+.emoji{
+    color:purple;
+    /* background-color: yellow;  */
+}
+body{
+    background-color: blanchedalmond;
+    font: 18px;
+}
+/* styling the input textbox */
+#rounds{
+    width: 50px;
+    height:15px ;
+}
+/* styling the playround button */
+.plyrnd{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8px;
+}
+/* styling the scores class */
+.scores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+
+}
+/* styling the pSelect class */
+.Pselect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+/* positionong the pselect class element */
+.pLeft{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-left: 30px;
+}
+.pRight{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-right: 30px;
+}
+/* positioning the scores class element */
+.left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-left: 30px;
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-right: 30px;
+}
+/* styling the buttons */
+button{
+    border-radius: 8px;
+    padding: 16px 8px 16px 8px;
+    font-size: 25px;
+    color: rgb(255, 0, 242);
+    border-color: blanchedalmond;
+}
+/* styling the h1 element */
+h1{
+    text-align: center;
+    font-style: italic;
+    font-size: 45px;
+}
+/* styling the p elements */
+p{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-display: block;
+    color:rgb(35, 21, 231);
+}
+#message{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    text-align: center;
+}

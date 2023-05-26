@@ -73,21 +73,19 @@ const buttons = document.getElementsByClassName("btnS");
 //   const noRound = rounds.value;
   const playbtn = document.getElementById("playround");
   playbtn.addEventListener("click",function(){
-    const rounds = document.getElementById("rounds");
-    const noRound = rounds.value;
-    if (noRound > 0){
-        for(let i= 0; i<noRound; i++){
+    for(let i= 0; i<5; i++){
         setTimeout(game,5000);
         }
-    }
-    else{
-            message = "please enter the no of roumds";
-            const pMessage = document.getElementById("roundMessage");
-            pMessage.textContent = message;
-        }
-        winner();
+    setTimeout(winner,15000);
     
   });
+// function to reload page
+const reloadbtn = document.getElementById("playround");
+reloadbtn.addEventListener("dblclick",reload);
+
+function reload(){
+  location.reload();
+}
 
 //   function to play game for 5 rounds
   function game() {

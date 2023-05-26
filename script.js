@@ -5,58 +5,58 @@ function getComputerChoice()
     let i = Math.floor(Math.random() * 3);
     return choice[i];
 }
-// //   function to play a single round
-//   let playerScore = 0;
-//   let computerScore = 0;
+//   function to play a single round
+  let playerScore = 0;
+  let computerScore = 0;
   
-//   function playRound(playerSelection, computerSelection)
-//    {
-//         playerSelection = playerSelection.toLowerCase();
-//         let message;
+  function playRound(playerSelection, computerSelection)
+   {
+        playerSelection = playerSelection.toLowerCase();
+        let message;
   
-//     if (
-//       (playerSelection === "rock" && computerSelection === "scissors") ||
-//       (playerSelection === "scissors" && computerSelection === "paper") ||
-//       (playerSelection === "paper" && computerSelection === "rock")
-//     ) 
-//     {
-//       playerScore += 1;
-//       message = "You won this round!";
-//     } 
-//     else if (
-//       (playerSelection === "rock" && computerSelection === "paper") ||
-//       (playerSelection === "scissors" && computerSelection === "rock") ||
-//       (playerSelection === "paper" && computerSelection === "scissors")
-//     ) 
-//     {
-//       computerScore += 1;
-//       message = "You lost this round!";
-//     } 
-//     else if (
-//       (playerSelection === "rock" && computerSelection === "rock") ||
-//       (playerSelection === "scissors" && computerSelection === "scissors") ||
-//       (playerSelection === "paper" && computerSelection === "paper")
-//     )
-//      {
-//       message = "It's a tie! Do you want to go again?";
-//     }
+    if (
+      (playerSelection === "rock" && computerSelection === "scissors") ||
+      (playerSelection === "scissors" && computerSelection === "paper") ||
+      (playerSelection === "paper" && computerSelection === "rock")
+    ) 
+    {
+      playerScore += 1;
+      message = "You won this round!";
+    } 
+    else if (
+      (playerSelection === "rock" && computerSelection === "paper") ||
+      (playerSelection === "scissors" && computerSelection === "rock") ||
+      (playerSelection === "paper" && computerSelection === "scissors")
+    ) 
+    {
+      computerScore += 1;
+      message = "You lost this round!";
+    } 
+    else if (
+      (playerSelection === "rock" && computerSelection === "rock") ||
+      (playerSelection === "scissors" && computerSelection === "scissors") ||
+      (playerSelection === "paper" && computerSelection === "paper")
+    )
+     {
+      message = "It's a tie! Do you want to go again?";
+    }
   
-//     console.log("playerscore: ", playerScore);
-//     console.log("computerscore: ", computerScore);
+    console.log("playerscore: ", playerScore);
+    console.log("computerscore: ", computerScore);
   
-//     return message;
-//   }
- function getButtonValuesOnClick(btnS){
-  const buttons = document.getElementsByClassName("btnS");
-  buttons.forEach(function(button){
-    button.addEventListener("click", function(){
-      let selection = button.value;
-    });
+    return message;
+  }
+  const selectBtn = document.getElementsByClassName("btnS");
+  for(let i= 0; i < selectBtn.length; i++){
+  selectBtn[i].addEventListener("click",playerSelect);
+  }
+  // function to determine player selection
+  function playerSelect(){
+    let btns = document.getElementsByClassName("btnS")
+    for (let i = o; i < btns.length; i++ )
+    let selection = el.getattribute('value');
     console.log(selection);
-  });
-
- }
- getButtonValuesOnClick(btnS);
+  }
   // const button = document.getElementById("playround");
   // button.addEventListener("click",playRound);
 // //   function to play 5 rounds and determine the winner
